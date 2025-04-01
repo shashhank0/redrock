@@ -531,7 +531,7 @@ footer {
 }
 
 .social-icons a {
-    display: flex;
+    display: inline-flex; /* Changed to inline-flex */
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -539,12 +539,26 @@ footer {
     border-radius: 50%;
     background-color: rgba(255,255,255,0.1);
     transition: all 0.3s;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    text-decoration: none;
+    color: white; /* Ensure icon color */
 }
 
 .social-icons a:hover {
     background-color: var(--green);
+    color: white;
 }
 
+/* Target Font Awesome icons specifically */
+.social-icons a .fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
